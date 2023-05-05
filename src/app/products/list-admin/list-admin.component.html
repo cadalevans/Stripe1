@@ -1,0 +1,52 @@
+
+ <!-- START RESPONSIVE TABLES -->
+
+
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">list products</h3>
+            </div>
+
+            <div class="panel-body panel-body-table">
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-actions">
+                        <thead>
+                            <tr>
+                                <th width="50">id product</th>
+                                <th width="50">TypeCategory </th>
+                                <th width="50">image  </th>
+                                <th width="100">product name</th>
+                                <th width="100">price</th>
+                                <th width="100">like</th>
+                                <th width="100">dislike</th>
+                                <th width="100">actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>           
+                                                        
+                             <!-- Loop through loans array and create table rows -->
+                                <tr *ngFor="let product of listProducts">
+                                    <td class="text-center">{{ product.idProduct }}</td>
+                                    <td><strong>{{ product.categoryProduct }}</strong></td>
+                                    <td><img [src]="product.img" alt="Product image" style="width: 200px; height: auto;"></td>
+                                    <td>{{ product.productName }}
+                                    <td>{{ product.price }}</td>
+                                    <td>{{ product.likes }}</td>
+                                    <td>{{ product.dislikes }}</td>
+                                    <td>
+                                        <button class="btn btn-default btn-rounded btn-sm" routerLink="update" ><span class="fa fa-pencil"></span></button>
+                                        <button class="btn btn-danger btn-rounded btn-sm" (click)="deletProductsByIdNow(product)"><span class="fa fa-times"></span></button>
+                                       
+
+                                        <button  class="fa fa-envelope"></button>
+                                 </td>
+                        </tbody>
+                    </table>
+                </div>                                
+
+            </div>
+        </div>                                                
+
+<!-- END RESPONSIVE TABLES -->

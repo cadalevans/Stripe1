@@ -1,0 +1,62 @@
+<div class="container-fluid">
+     <div class="blog__item__text">
+
+    <h3><a href="./blog-details.html">You can add reclamation from here </a></h3>
+    <a routerLink="/reclamation/reclamer" class="read__more">Add reclamation<i class="fa fa-long-arrow-right"></i></a>
+     </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card padd">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table  class="table align-middle  table-nowrap table-hover">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date D'envoi</th>
+                    <th scope="col">Statut</th>
+                  
+                  </tr>
+                </thead>
+              
+                <tbody >
+                    <ng-container *ngIf="this.reclamations as reclamation">
+    
+                    <ng-container *ngFor="let reclamation of reclamations; " >
+                        <tr>
+                        <td>
+                          <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark"> {{reclamation.nomReclamation}}</a>
+                          </h5>
+                        </td>
+    
+                        <td>{{reclamation.description}} </td>
+                    
+                        <td>{{reclamation.createdAt}}</td>
+    
+                        <td>
+                            <div>
+                              <a href="javascript: void(0);" class=" ">
+                                <span [ngClass]="{' badge-success': reclamation.statutReclamation=='Accepte',
+                                'badge-danger': reclamation.statutReclamation=='Refusee',
+                                'badge-secondary': reclamation.statutReclamation=='Encours'}">
+                                {{reclamation.statutReclamation}}
+                              </span>
+                              </a>
+                            </div>
+                          </td>
+    
+                        </tr>
+                    </ng-container>
+                </ng-container>
+                  </tbody>
+              </table>
+            </div>
+        
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   

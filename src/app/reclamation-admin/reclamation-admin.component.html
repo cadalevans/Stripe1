@@ -1,0 +1,75 @@
+
+<div class="container-fluid page-content">
+    
+  <h2 class="panel-title"><strong _ngcontent-yca-c52="">Claim</strong> Admin</h2>
+
+
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table  class="table align-middle  table-nowrap table-hover">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Claim Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Creation Date</th>
+                    <th scope="col">Action</th>
+                    
+                  </tr>
+                </thead>
+              
+                <tbody >
+                    <ng-container *ngIf="this.reclamations as reclamation">
+    
+                    <ng-container *ngFor="let reclamation of reclamations; " >
+                        <tr>
+                            <td>{{reclamation.complaintId}}</td>
+                        <td>
+                          <h5 class="font-size-14 mb-1"><a href="javascript: void(0);" class="text-dark"> {{reclamation.user}}</a>
+                          </h5>
+                        </td>
+                        <td>{{reclamation.description}}</td>
+                        <td>{{reclamation.nomReclamation}}</td>
+                        <td>{{reclamation.createdAt}}</td>
+                  
+    
+                        <td>
+                            <button [disabled]="reclamation.statutReclamation != 'Encours'" type="button" class="btn btn-success" (click)="accepterReclamation(reclamation.complaintId)">Accept</button>
+                            <button [disabled]="reclamation.statutReclamation != 'Encours'" type="button" class="btn btn-danger" (click)="refuserReclamation(reclamation.complaintId)">Decline</button>
+                          </td>
+                      
+    
+                        </tr>
+                    </ng-container>
+                </ng-container>
+                  </tbody>
+              </table>
+            </div>
+          
+             
+            </div>
+          </div>
+        </div>
+      
+      <div class="col-lg-3">
+    
+        <h3 _ngcontent-yca-c52="" class="panel-title"><strong _ngcontent-yca-c52="">Statistique</strong> Layout</h3>
+             <div class="card">
+
+       <!-- <canvas baseChart
+  [type]="'pie'"
+      [datasets]="pieChartDatasets"
+      [labels]="pieChartLabels"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend">
+            
+    </canvas> -->
+        </div>
+      </div>
+    </div>
+    </div>

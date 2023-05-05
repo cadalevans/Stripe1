@@ -1,0 +1,50 @@
+    <body class="">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Virement bancaire </h3></div>
+                                <div class="card-body">
+                              
+                                <div class="form-group">
+                                  <label for="id">Identifiant</label>
+                                  <input
+                                    type="id"
+                                    class="form-control"
+                                    [(ngModel)]="id"
+                                  />
+                                </div>
+                                <div class="form-group">
+                                  <label for="somme">Montant du virement :</label>
+                                  <input
+                                    type="somme"
+                                    class="form-control"
+                                    [(ngModel)]="somme"
+                                  />
+                                </div>
+
+                                <div class="form-group">
+                                  <button class="btn btn-primary btn-block"
+                                  (click)="effectuerVirement()"
+                                   >
+                                   Ajout de l'argent 
+                                  </button>
+                                    <button class="btn btn-primary btn-block"
+                                    (click)="retrait(id, somme)"
+                                     >
+                                     Retrait de l'argent 
+                                    </button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+    </div>
+</body>

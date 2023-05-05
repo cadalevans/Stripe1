@@ -1,0 +1,14 @@
+<form #form="ngForm" (ngSubmit)="add(form)">
+    <div class="form-group">
+      <label for="exampleInputEmail1">loan  Calculator</label>
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="credit" name="credit" [(ngModel)]="creditAmount">
+    
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1"> repayment of credits </label>
+      <input type="number" class="form-control" id="exampleInputPassword1" placeholder="duration" name="period" [(ngModel)]="duration">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <p *ngIf="test">resultat : {{pa}}</p>

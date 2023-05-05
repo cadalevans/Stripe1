@@ -1,0 +1,24 @@
+<form #form="ngForm" (ngSubmit)="add(form)">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Vehicle value</label>
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vehicle value" name="Vehiclevalue" [(ngModel)]="Vehiclevalue">
+    
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Duration</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Duration" name="Duration" [(ngModel)]="Duration">
+      
+      </div>
+    <div class="form-group">
+        <select class="form-select" aria-label="Default select example" name="nbrCh" [(ngModel)]="nbrCh">
+            <option >4 CH</option>
+            <option >5-8 CH</option>
+            <option > superieur 8</option>
+          </select>
+    </div>
+  
+      
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <p *ngIf="test"> {{rst}} par mois </p>

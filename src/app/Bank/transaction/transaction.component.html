@@ -1,0 +1,38 @@
+
+<body class="">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Virement bancaire </h3></div>
+                                <div class="card-body">
+
+
+                                    <div class="form-group">
+    <label for="idRec">ID de l'envoyeur:</label>
+    <input type="text" class="form-control" id="idRec" [(ngModel)]="idRec">
+  </div>
+<div class="form-group">
+    <label for="idEnv">ID du receveur:</label>
+    <input type="text" class="form-control" id="idEnv" [(ngModel)]="idEnv">
+  </div>
+  <div class="form-group">
+    <label for="somme">Somme à transférer:</label>
+    <input type="text" class="form-control" id="somme" [(ngModel)]="somme">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="transaction()">Transférer</button>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</div>
+</body>

@@ -1,0 +1,8 @@
+.button-container {
+    justify-content: space-between;
+    margin-bottom: 10px; /* ajoute un espace en bas des boutons */
+  }
+  .image-container{
+    position: relative;
+    height: 300px;
+  }

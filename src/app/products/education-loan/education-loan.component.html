@@ -1,0 +1,51 @@
+
+<!-- Services Section Begin -->
+<form (submit)="getProductsByPriceRange(minPrice, maxPrice )">
+  <div class="form-group">
+    <label for="minPrice">Min Price:</label>
+    <input type="number" class="form-control" id="minPrice" name="minPrice" [(ngModel)]="minPrice">
+  </div>
+  <div class="form-group">
+    <label for="maxPrice">Max Price:</label>
+    <input type="number" class="form-control" id="maxPrice" name="maxPrice" [(ngModel)]="maxPrice">
+  </div>
+  <button type="submit" class="btn btn-primary">Get Products</button>
+</form>
+<section class="services spad">
+    <div class="container">
+      <div class="row d-flex justify-content-center align-items-center h-200">
+      <div class="row">
+        <div class="col-md-6 ">
+          <h3>STUDENT Products</h3>
+          <ul class="row" >
+            <ng-container *ngFor="let product of listProducts">
+              <li *ngIf="product.categoryProduct==='STUDENT'">
+                <div class="product ">
+                  <div class="image-container">
+                    <img class="home-page-product-image" src="{{product.img}}" alt="{{product.productName}}" width="200" 
+                    height="200">
+                  </div>
+                  <div class="product-info">
+                    <h5>{{product.productName}}</h5>
+                    <h6>{{product.price}} $</h6>
+                    
+                    <div class="button-container">
+                      <button class="btn btn-primary btn-like justify-content-center" type="button" (click)="onLike(product.idProduct)"><i class="fa fa-thumbs-up thumbs-icon"></i></button>
+                      <button class="btn btn-primary btn-dislike justify-content-center" type="button" (click)="ondisLike(product.idProduct)" ><i class="fa fa-thumbs-down thumbs-icon"></i></button>
+                      <button class="btn btn-primary justify-content-center" type="button" (click)="addProductToCart(product)"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
+                    
+                   
+                  </div>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services End -->
+ 
+

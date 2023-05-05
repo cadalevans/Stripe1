@@ -1,0 +1,195 @@
+
+<div class="row">
+    <div class="col-2">
+    </div>
+    
+    <div class="col-10">
+        
+        
+      <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="card shadow-lg border-0 rounded-lg mt-5">
+                        <div class="card-header"><h3 class="text-center font-weight-light my-4">Your Information</h3></div>
+                        <div class="card-body">
+                                      <form
+                          name="form"
+                          (ngSubmit)="f.form.valid && onSubmit()"
+                          #f="ngForm"
+                          novalidate
+                        >
+                    
+                        <div class="form-group">
+                          <label for="nom">Last Name</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="lastName"
+                            [(ngModel)]="updatedUser.lastName"
+                            required
+                            minlength="3"
+                            maxlength="20"
+                            #lastName="ngModel"
+                            [ngClass]="{ 'is-invalid': f.submitted && lastName.errors }"
+                          />
+                          <div class="invalid-feedback" *ngIf="lastName.errors && f.submitted">
+                            <div *ngIf="lastName.errors['required']">Username is required</div>
+                            <div *ngIf="lastName.errors['minlength']">
+                              Nom must be at least 3 characters
+                            </div>
+                            <div *ngIf="lastName.errors['maxlength']">
+                              Nom must be at most 20 characters
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <div class="form-group">
+                          <label for="prenom">Fist Name</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="prenom"
+                            [(ngModel)]="updatedUser.firstName"                         
+                           required
+                            minlength="3"
+                            maxlength="20"
+                            #firstName="ngModel"
+                            [ngClass]="{ 'is-invalid': f.submitted && firstName.errors }"
+                          />
+                          <div class="invalid-feedback" *ngIf="firstName.errors && f.submitted">
+                            <div *ngIf="firstName.errors['required']">Username is required</div>
+                            <div *ngIf="firstName.errors['minlength']">
+                              Prenom must be at least 3 characters
+                            </div>
+                            <div *ngIf="firstName.errors['maxlength']">
+                              Prenom must be at most 20 characters
+                            </div>
+                          </div>
+                        </div>
+                    
+                         
+                          <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                              type="email"
+                              class="form-control"
+                              name="email"
+                              [(ngModel)]="updatedUser.email" 
+                               required
+                              email
+                              #email="ngModel"
+                              [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
+                            />
+  
+  
+                            <div class="invalid-feedback" *ngIf="email.errors && f.submitted">
+                              <div *ngIf="email.errors['required']">Email is required</div>
+                              <div *ngIf="email.errors['email']">
+                                Email must be a valid email address
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label for="nom">numTel</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="lastName"
+                              [(ngModel)]="updatedUser.numTel"
+                              required
+                              minlength="3"
+                              maxlength="20"
+                              #numTel="ngModel"
+                              [ngClass]="{ 'is-invalid': f.submitted && numTel.errors }"
+                            />
+                            <div class="invalid-feedback" *ngIf="numTel.errors && f.submitted">
+                              <div *ngIf="numTel.errors['required']">Username is required</div>
+                              <div *ngIf="numTel.errors['minlength']">
+                                Nom must be at least 3 characters
+                              </div>
+                              <div *ngIf="numTel.errors['maxlength']">
+                                Nom must be at most 20 characters
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="form-group">
+                            <label for="password">Password</label> 
+                             <input
+                              type="password"
+                              class="form-control"
+                              name="password"
+                              [(ngModel)]="password" 
+                              required
+                              minlength="3"
+                              maxlength="20"
+                            
+                            />
+                           
+                          </div>
+                      
+                       
+                      
+                          
+                          <div class="form-group">
+                            <button class="btn btn-primary btn-block" type="submit">Modifier</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </main>
+                      
+                         
+                      
+                          
+                          </div>
+                          
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+  
+  
+  
+  
+  
+  

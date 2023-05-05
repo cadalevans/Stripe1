@@ -1,0 +1,22 @@
+<div>
+    <label for="creditType">Credit type:</label>
+    <select id="creditType" [(ngModel)]="creditType">
+      <option value="car">Car</option>
+      <option value="house">House</option>
+      <option value="land">Land</option>
+    </select>
+  </div>
+  
+<div *ngIf="creditType === 'car'">
+    <label for="fiscalPower">Fiscal power:</label>
+    <select id="fiscalPower" [(ngModel)]="fiscalPower">
+      <option *ngFor="let power of powers" [value]="power">{{power}}</option>
+    </select>
+  </div>
+  <div>
+    <label for="numberOfYears">Number of years:</label>
+    <input type="number" id="numberOfYears" [(ngModel)]="numberOfYears">
+  </div>
+  <div>
+    <button (click)="calculatePrice()">Calculate price</button>
+  </div>

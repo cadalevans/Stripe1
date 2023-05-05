@@ -1,0 +1,60 @@
+<body class="">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Ajouter bank account</h3></div>
+                                <div class="card-body">
+                                    <form
+                              >
+                                <div class="form-group">
+                                  <label for="rib">RIB</label>
+                                  <input
+                                    type="rib"
+                                    class="form-control"
+                                    name="rib"
+                                    [(ngModel)]="account.rib" 
+                                      required
+                                    #rib="ngModel"
+                                  />
+                                  <div class="invalid-feedback" *ngIf="rib.errors ">
+                                    <div *ngIf="rib.errors['required']">rib is required</div>
+                                    <div *ngIf="rib.errors['minlength']">
+                                      rib must be at least 6 characters
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="balance">Balance</label>
+                                  <input
+                                    type="balance"
+                                    class="form-control"
+                                    name="balance"
+                                    [(ngModel)]="account.balance"
+                                    required
+                                    minlength="6"
+                                    #balance="ngModel"
+                                  />
+                  
+                                <div class="form-group mt-3">
+                                  <button class="btn btn-primary btn-block"
+                                  (click)="addAccount()"
+                                   >
+                                   Ajouter un compte bancaire
+                                  </button>
+                                </div>
+                                </div>
+                              </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+    </div>
+</body>

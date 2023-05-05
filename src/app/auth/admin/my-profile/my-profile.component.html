@@ -1,0 +1,48 @@
+
+<div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-10"> 
+        
+      <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="card shadow-lg border-0 rounded-lg mt-5">
+                        <div class="card-header"><h3 class="text-center font-weight-light my-4">Your Information</h3></div>
+                        <div class="card-body">
+                            <div>
+      <table class="table table-bordered">
+        <tr>
+          <th>Nom</th>
+          <td>{{ user.firstName }}</td>
+        </tr>
+        <tr>
+          <th>Prénom</th>
+          <td>{{ user.lastName }}</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+          <th>numTel</th>
+          <td>{{ user.numTel }}</td>
+        </tr>
+      </table>
+      <div>
+        <button (click)="supprimerCompte()">Supprimer mon compte</button>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+  </main>
+    </div>
+    </div>
+
+    

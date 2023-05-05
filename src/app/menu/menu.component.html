@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RequestLoan</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Leaflet road tracing  -->
+   <!-- Leaflet CSS -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+   <!-- Leaflet Routing Machine CSS -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+ 
+   <!-- Leaflet and its dependencies -->
+   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"></script>
+   <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
+   <script src="https://unpkg.com/rbush@3.0.0/dist/rbush.min.js"></script>
+   <script src="https://unpkg.com/leaflet-ajax@3.0.1/dist/leaflet.ajax.min.js"></script>
+ 
+  
+  
+
+   <!-- Leaflet Routing Machine -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+   <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+   <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+  <!-- Leaflet star-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+ integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+ crossorigin=""></script>
+ <!-- Leaflet End -->
+  
+</head>
+     
+
+  <form [formGroup]="aFormGroup" (submit)="onSubmit()">
+    <ngx-recaptcha2 #captchaElem
+      [siteKey]="siteKey"
+      
+      [useGlobalDomain]="false"
+      data-size="invisible">
+    </ngx-recaptcha2>
+  
+    <button type="submit">Submit</button>
+  </form>
+
+<!-- google-maps-demo.component.html -->
+
+<google-map height="400px"
+            width="750px"
+            [center]="center"
+            [zoom]="zoom"
+            (mapClick)="addMarker($event)">
+  <map-marker #marker="mapMarker"
+              *ngFor="let markerPosition of markerPositions"
+              [position]="markerPosition"
+              (mapClick)="openInfoWindow(marker)"></map-marker>
+              <map-marker [position]="markerPosition"></map-marker>
+  <map-info-window>Info Window content</map-info-window>
+</google-map>
+
+
+<!-- Open Street Map -->
+<ejs-maps id='rn-container' style='display:block' [zoomSettings]='zoomSettings' [centerPosition]='centerPosition'>
+  <e-layers>
+ <e-layer [urlTemplate]= 'urlTemplate' [markerSettings]='markerSettings' [navigationLineSettings]='navigationLineSettings'></e-layer>
+ </e-layers>
+ </ejs-maps>
+<br>
+
+ <div id="map"></div>
+
+ 

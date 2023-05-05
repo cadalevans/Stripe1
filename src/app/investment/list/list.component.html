@@ -1,0 +1,45 @@
+<!-- START SIMPLE DATATABLE -->
+<section class="services spad">
+    <div class="container">
+<div class="panel panel-default">
+    <div class="panel-heading">                                
+        <h3 class="panel-title">List of Investment </h3>   
+        <ul class="panel-controls">
+            <li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+            <li><a href="#" class="panel-refresh"><span class="fa fa-refresh"></span></a></li>
+            <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
+        </ul>                                
+    </div>
+    <div class="panel-body">
+        <table class="table datatable_simple">
+            <thead>
+                <tr>
+                    <th width="50">id</th>
+                    <th width="100">Investment type </th>
+                    
+                    <th width="100">Investment Money</th>
+                    <th width="100">actions </th>
+                    
+                </tr>
+            </thead>
+            <tbody>                                            
+                <!-- Loop through loans array and create table rows -->
+                <tr *ngFor="let investment of listinvestment">
+                    <td class="text-center">{{ investment.idInvestment }}</td>
+                    <td><strong>{{ investment.typeInvestment}}</strong></td>
+                    <td><strong>{{ investment.investmentMoney}}</strong></td>
+
+                    
+                    <td>
+                        <button class="primary-btn" *ngIf="investment.status == false" class="btn btn-default btn-rounded btn-sm" (click)="validateInvestment(investment.idInvestment)"><span class="fa fa-check fa-1"></span></button>
+                        <span *ngIf="investment.status == true" class="btn btn-default btn-rounded btn-sm" >Valid</span>
+
+                        <button class="btn btn-danger btn-rounded btn-sm" (click)="deletInvestmentByIdNow(investment.idInvestment)"><span class="fa fa-times"></span></button>
+                    </td>
+            </tbody>
+              
+        </table>
+    </div>
+</div>
+</div>
+</section>

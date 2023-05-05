@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mon site web</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<!-- PAGE CONTENT WRAPPER -->
+<div class="page-content-wrap">
+                
+    <div class="row">
+        <div class="col-md-12">
+            
+            <form class="form-horizontal">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>One Column</strong> Layout</h3>
+                    <ul class="panel-controls">
+                        <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                    </ul>
+                </div>
+                <div class="panel-body">
+                    <p>This is non libero bibendum, scelerisque arcu id, placerat nunc. Integer ullamcorper rutrum dui eget porta. Fusce enim dui, pulvinar a augue nec, dapibus hendrerit mauris. Praesent efficitur, elit non convallis faucibus, enim sapien suscipit mi, sit amet fringilla felis arcu id sem. Phasellus semper felis in odio convallis, et venenatis nisl posuere. Morbi non aliquet magna, a consectetur risus. Vivamus quis tellus eros. Nulla sagittis nisi sit amet orci consectetur laoreet. Vivamus volutpat erat ac vulputate laoreet. Phasellus eu ipsum massa.</p>
+                </div>
+                <div class="panel-body">                                                                        
+                    
+                   
+                    
+                    <div class="form-group">                                        
+                        <label class="col-md-3 col-xs-12 control-label">Amount Required</label>
+                        <div class="col-md-6 col-xs-12">
+                            <div class="input-group">
+                               
+                                <input required type="number" [(ngModel)]="request.amountRequired" name="amountRequired" id="amountRequired"
+                            class="form-control phone"  placeholder="Enter your amountRequired..." />
+                            </div>            
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 col-xs-12 control-label">Term Loan</label>
+                        <div class="col-md-6 col-xs-12">                                            
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                <input type="number" class="form-control" [(ngModel)]="request.term_loan" name="term_loan"/>
+                            </div>                                            
+        
+                        </div>
+                    </div>
+                   
+                    
+                    <div class="form-group">
+                        <label class="col-md-3 col-xs-12 control-label">Textarea</label>
+                        <div class="col-md-6 col-xs-12">                                            
+                            <textarea class="form-control" rows="5"></textarea>
+                            <span class="help-block">Default textarea field</span>
+                        </div>
+                    </div>
+                    
+                   
+                    
+                    <div class="form-group">
+                        <label class="col-md-3 col-xs-12 control-label">Curent Credits</label>
+                        <div class="col-md-6 col-xs-12">                                                                                            
+                            <select class="form-control select">
+                                <option>i have a curent credit</option>
+                                <option>i dont have any credits</option>
+                            </select>
+                            <span class="help-block">Select box example</span>
+                        </div>
+                    </div>
+                    
+                   
+                    
+                    
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-default">Clear Form</button>                                    
+                    <button class="btn btn-primary pull-right" type="submit" name="submit_reg" value="Register" (click)="addRequestnow()">Submit</button>
+                </div>
+            </div>
+            </form>
+            
+        </div>
+    </div>                    
+    
+</div>
+<!-- END PAGE CONTENT WRAPPER -->                                                
+        
+                    
+                    
+
+
+
+

@@ -1,0 +1,9 @@
+.page-content {
+    padding: calc(70px + 24px) calc(24px / 2) 60px calc(24px / 2);
+}
+#chart {
+    max-width: 380px;
+    margin: 35px auto;
+    padding: 0;
+  }
+  

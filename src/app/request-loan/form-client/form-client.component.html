@@ -1,0 +1,56 @@
+
+<!-- Hero Section Begin -->
+<section class="hero set-bg" data-setbg="/assets/client/img/hero-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="hero__text">
+                    <h2>Find The Best Monthly Payment</h2>
+                    <p>Apply for our business loan in minutes, without painful</p>
+                    <a href="#" class="primary-btn">Get Start</a>
+                    <a href="#" class="primary-btn howit-btn">How It Work</a>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-2">
+                <div class="hero__form">
+                    <h3>How much do you need</h3>
+                    <form #addrequestForm='ngForm' (submit)="addrequestnow(addrequestForm)" autocomplete="off" class="justify-content-center">
+                        <div class="input-list">
+                            <div class="input-list-item">
+                                <p>Amount of money ($):</p>
+                                <input required type="number" [(ngModel)]="amountRequired" name="amountRequired" id="amountRequired"
+                            class="form-control phone"  placeholder="Enter your amountRequired..." />
+                            </div>
+                            <div class="input-list-item">
+                                <p>How long for (day):</p>
+                                <input type="number" class="form-control" [(ngModel)]="term_loan" name="term_loan"/>
+                            </div>
+                            <div class="input-list-item">
+                                <p>income:</p>
+                                <input type="number" class="form-control" [(ngModel)]="income" name="income"/>
+                            </div>
+                            <div class="input-list-item">
+                                <p>projectSection:</p>
+                                <input type="text" class="form-control" [(ngModel)]="projectSection" name="projectSection"/>
+                            </div>
+                            <div class="input-list-item">
+                                <p>projectDesc:</p>
+                                <input type="text" class="form-control" [(ngModel)]="projectDesc" name="projectDesc"/>
+                            </div>
+                            <div>
+                                <label for="curCredits">Current Credits:</label>
+                                <input type="checkbox" id="curCredits" name="curCredits" [(ngModel)]="curCredits">
+                                </div>
+                        </div>
+                       
+                        
+                        <button type="submit" class="site-btn" >Get Your Loan Now!</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
+

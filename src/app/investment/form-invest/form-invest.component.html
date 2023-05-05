@@ -1,0 +1,50 @@
+<!-- PAGE CONTENT WRAPPER -->
+<div class="blog__item" style="border: 3px; border-color: blue;">
+    <div class="page-content-wrap" style="margin-left: 20%;">
+                    
+        <div class="row">
+            <div class="col-md-12">
+                
+                <form #f="ngForm" class="form-horizontal" (ngSubmit)="addInvestmentnow(f)" >
+                <div class="panel panel-default"style="min-width: 1000px;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Invest</strong></h3>
+                        
+                    </div>                
+                    <div class="panel-body form-group-separated">
+                        <div class="form-group">
+                            <label class="col-md-3 col-xs-12 control-label">investment Money</label>
+                            <div class="col-md-6 col-xs-12">                                            
+                                <div class="input-group">
+                                    <input type="number" min="1000" max="50000" class="form-control" name="investmentMoney" [(ngModel)]="investmentMoney" style="min-width: 500px;"/>
+                                </div>                                            
+                            </div>
+                        </div>
+                        <div class="form-group"  >
+                            <label class="col-md-3 col-xs-12 control-label">type investment</label>
+                            <br>
+                            <br>
+                            <div class="col-md-6 col-xs-12">                                                                                            
+                                <select class="form-control col-md-6 col-xs-12"   name="typeInvestment" [(ngModel)]="typeInvestment" style="min-width: 500px;">
+                            
+                                    <option >ACTIONS</option>
+                                    <option >DEPOSITS</option>
+                                    <option >INVESTMENTFUNDS</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="panel-footer">
+                                          
+                        <button class="btn btn-primary pull-right"  type="submit">submit</button>
+                    </div>
+                </div>
+                </form>
+                
+            </div>
+        </div>                    
+    </div>
+    </div>
+    <!-- END PAGE CONTENT WRAPPER -->

@@ -1,0 +1,5 @@
+export enum TypeInvestment {
+    ACTIONS= "ACTIONS",
+    DEPOSITS="DEPOSITS",
+    INVESTMENTFUNDS="INVESTMENTFUNDS"
+}
