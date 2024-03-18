@@ -31,22 +31,18 @@ import { LegendService, MarkerService, MapsTooltipService, DataLabelService, Bub
 
 
 import { ChartsComponent } from './charts/charts.component';
-import { BankComponent } from './payment/bank/bank.component';
+
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoaderComponent } from './loader/loader.component';
-import { RegistreComponent } from './auth/registre/registre.component';
-import { ForgetpasswordComponent } from './auth/forgetpassword/forgetpassword.component';
-import { ResetpasswordComponent } from './auth/forgetpassword/resetpassword/resetpassword.component';
-import { LoginComponent } from './auth/login/login.component';
-import { VerificationComponent } from './verification/verification.component';
+
 import { FormClientComponent } from './request-loan/form-client/form-client.component';
 import { ListComponent } from './request-loan/listRequest/listRequest.component';
 import { FormComponent } from './request-loan/form/form.component';
 import { EarningComponent } from './investment/earning/earning.component';
 import { HeaderComponent } from './header/header.component';
 import { UpdateComponent } from './products/update/update.component';
-import { UpdateProfileComponent } from './auth/update-profile/update-profile.component';
+
 
 
 /**
@@ -64,7 +60,7 @@ import { UpdateProfileComponent } from './auth/update-profile/update-profile.com
     AppComponent,
      
 
-   MenuComponent,
+
     ModalComponent,
     PaymentComponent,
     MapMarkerComponent,
@@ -72,15 +68,10 @@ import { UpdateProfileComponent } from './auth/update-profile/update-profile.com
     MapPolylineComponent,
     MapPolygonComponent,
     NavbarComponent,
-    BankComponent,
-    RegistreComponent,
-    ForgetpasswordComponent,
-    ResetpasswordComponent,
-    LoginComponent,
+
+
     LoaderComponent,
-    VerificationComponent,
-    UpdateProfileComponent
-   
+
 
  
    

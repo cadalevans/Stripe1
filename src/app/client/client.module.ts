@@ -12,6 +12,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { HomeComponent } from '../home/home.component';
 import { ForumComponent } from '../forum/forum.component';
 import { ChartsComponent } from '../charts/charts.component';
+import { NgxCaptchaModule } from 'ngx-captcha/lib';
 
 
 
@@ -23,6 +24,7 @@ import { ChartsComponent } from '../charts/charts.component';
     HomeComponent,
     ForumComponent,
     ChartsComponent,
+   
   ],
   imports: [
     CommonModule,

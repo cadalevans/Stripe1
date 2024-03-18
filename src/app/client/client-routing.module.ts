@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'requestLoan', loadChildren: () => import('../request-loan/request-loan.module').then(m => m.RequestLoanModule) },
   
   { path: 'investment', loadChildren: () => import('../investment/investment.module').then(m => m.InvestmentModule) },
-  { path: 'user', loadChildren: () => import('../user/user.module').then(m => m.UserModule) },
+
   { path: 'payment', loadChildren: () => import('../payment/payment.module').then(m => m.PaymentModule) },
   { path: 'product', loadChildren: () => import('../products/products.module').then(m => m.ProductsModule) },
   { path: 'chatbot',component :ChatbotComponent },

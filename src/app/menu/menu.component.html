@@ -38,21 +38,13 @@
  <!-- Leaflet End -->
   
 </head>
-     
 
-  <form [formGroup]="aFormGroup" (submit)="onSubmit()">
-    <ngx-recaptcha2 #captchaElem
-      [siteKey]="siteKey"
-      
-      [useGlobalDomain]="false"
-      data-size="invisible">
-    </ngx-recaptcha2>
+
   
-    <button type="submit">Submit</button>
-  </form>
+
 
 <!-- google-maps-demo.component.html -->
-
+<!--
 <google-map height="400px"
             width="750px"
             [center]="center"
@@ -65,14 +57,17 @@
               <map-marker [position]="markerPosition"></map-marker>
   <map-info-window>Info Window content</map-info-window>
 </google-map>
+-->
 
 
 <!-- Open Street Map -->
+<!--
 <ejs-maps id='rn-container' style='display:block' [zoomSettings]='zoomSettings' [centerPosition]='centerPosition'>
   <e-layers>
  <e-layer [urlTemplate]= 'urlTemplate' [markerSettings]='markerSettings' [navigationLineSettings]='navigationLineSettings'></e-layer>
  </e-layers>
  </ejs-maps>
+-->
 <br>
 
  <div id="map"></div>

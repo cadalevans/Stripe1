@@ -4,8 +4,16 @@ import { CommonModule } from '@angular/common';
 import { PaymentRoutingModule } from './payment-routing.module';
 import { Maps, Zoom, Marker, NavigationLine } from '@syncfusion/ej2-angular-maps';
 import { MapsComponent } from './maps/maps.component';
-import { BankComponent } from './bank/bank.component';
-import { FormsModule } from '@angular/forms';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductsRoutingModule } from '../products/products-routing.module';
+import { RecaptchaFormsModule } from 'ng-recaptcha/lib/recaptcha-forms.module';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap/modal/modal.module';
+import { ToastrModule } from 'ngx-toastr/public_api';
+import { NgxStripeModule } from 'ngx-stripe/public_api';
+import { NgChartsModule } from 'ng2-charts/public_api';
+import { RecaptchaModule } from 'ng-recaptcha/lib/recaptcha.module';
+import { AppRoutingModule } from '../app-routing.module';
 //import { BankComponent } from './bank/bank.component';
 Maps.Inject(Zoom, Marker, NavigationLine);
 
@@ -18,6 +26,24 @@ Maps.Inject(Zoom, Marker, NavigationLine);
   ],
   imports: [
     CommonModule,
+    CommonModule, 
+    ProductsRoutingModule,
+    FormsModule,
+    PaymentRoutingModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
+ 
+    NgbModalModule,ToastrModule.forRoot(),
+    NgxStripeModule.forRoot('cle publique'),
+    NgChartsModule,
+    
+  RecaptchaModule,
+    RecaptchaModule,
+    FormsModule,
+    ReactiveFormsModule,
+ 
+    
+    AppRoutingModule,
     
   ]
 })
